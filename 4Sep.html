@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inline & Block Elements</title>
+    <style>
+       #block{
+        border: 2px solid black;
+        margin: 15px;
+        padding: 10px;
+        height: 200px;
+        width: 200px;
+        /* display: inline; */
+       }
+
+       #inline{
+        border: 2px solid black;
+        margin: 15px;
+        padding: 10px;
+        height: 200px;
+        width: 200px;
+        /* display: block; */
+        display: inline-block;
+       }
+
+       h1,h2{
+        display: inline;
+       }
+    </style>
+</head>
+<body>
+    <h1>Heading 1</h1>
+    <h2> Heading 2</h2>
+    <div id="block">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos, mollitia voluptates iure sed soluta dicta reiciendis sapiente ipsa, accusamus molestias, eveniet repudiandae odio omnis pariatur eius porro reprehenderit animi. Quasi.
+    </div>
+    <span id="inline">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto ad voluptatibus adipisci illo earum, quis sunt id sapiente, deleniti quaerat ratione ipsum sit delectus quasi impedit cum commodi nesciunt consequatur?
+    </span>
+    <span>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora reprehenderit qui eos sunt maxime aliquid blanditiis ab suscipit, distinctio labore autem ipsum ea unde fugit quae aperiam iusto dolorum non!
+    </span>
+</body>
+</html>

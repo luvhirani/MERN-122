@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            background-color: black;
+            padding: 7px;
+            
+            display: flex;
+            justify-content: space-evenly;
+            column-gap: 10px;
+        }
+
+        div a{
+            color: white;
+            text-decoration: none;
+        }
+
+        @media (max-width:700px){
+            #container{
+            background-color: black;
+            padding: 7px;
+            
+            display: flex;
+            justify-content: end;
+            column-gap: 10px;
+        }
+
+
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <a href="">Home</a>
+        <a href="">About</a>
+        <a href="">Contact</a>
+    </div>
+</body>
+</html>
