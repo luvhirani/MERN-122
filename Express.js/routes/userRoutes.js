@@ -3,9 +3,6 @@ const{loginUser} = require("../controllers/userController")
 
 const router = express.Router()
 
-
 router.get("/loginUser", loginUser)
-
-
 
 module.exports = router;

@@ -1,4 +1,4 @@
-const loginUser = function(){
+const loginUser = function(req,res){
 
 }
 

@@ -58,17 +58,23 @@ console.log(1)
 
 async function asyncTask (){
 
+   try {
     console.log(2)
 
-    let data = await fetch("https://jsonplaceholder.typicode.com/todos")
+    let data = await fetch("https://jaceholder.typicode.com/todos")
 
     console.log(3)
 
     console.log(data.json())
 
-    // console.log("successfully fetched")
+    console.log("successfully fetched")
 
     // console.log(4)
+   } 
+   catch (error) {
+    console.log(error,"Error while fetching the data")
+    return error;
+   }
 }
 asyncTask()
 
