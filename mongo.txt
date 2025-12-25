@@ -1,0 +1,98 @@
+show dbs
+use mern122
+show collections
+db.users.find()
+db.students.drop()
+db.createCollection("users");
+db.users.insertOne({name:"raj",age:22});
+db.users.insertMany({name:"raj",age:22},{name:"ajay"});
+db.users.deleteOne({name:"ajay"})
+db.users.deleteMany({age:22})
+
+
+db.users.insertMany([ 
+
+{ 
+
+"_id": "user1", 
+
+"name": "Amit Sharma", 
+
+"email": "amit.sharma@example.com", 
+
+"phone": "+91-987654210", 
+
+"address": "MG Road, Mumbai, Maharashtra" 
+
+}, 
+
+{ 
+
+"_id": "user2", 
+
+"name": "Priya Verma", 
+
+"email": "priya.verma@example.com", 
+
+"phone": "+91-987654211", 
+
+"address": "Nehru Place, New Delhi, Delhi" 
+
+}, 
+
+{ 
+
+"_id": "user3", 
+
+"name": "Rahul Singh", 
+
+"email": "rahul.singh@example.com", 
+
+"phone": "+91-987654212", 
+
+"address": "Sector 18, Noida, Uttar Pradesh" 
+
+}, 
+
+{ 
+
+"_id": "user4", 
+
+"name": "Anjali Nair", 
+
+"email": "anjali.nair@example.com", 
+
+"phone": "+91-987654213", 
+
+"address": "Marine Drive, Kochi, Kerala" 
+
+}, 
+
+{ 
+
+"_id": "user5", 
+
+"name": "Vikram Desai", 
+
+"email": "vikram.desai@example.com", 
+
+"phone": "+91-987654214", 
+
+"address": "Park Street, Kolkata, West Bengal" 
+
+} 
+
+] )
+
+
+
+db.users.aggregate([
+    {
+        "$lookup":{
+            "from":"orders",
+            "localfield":"_id",
+            "foreignField":"user_id",
+            "as":userOrders
+        }
+    }
+])
